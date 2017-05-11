@@ -1,0 +1,234 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>PicoConstants</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-10-26"><meta name="DC.source" content="picoconstants_help.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>PicoConstants</h1><!--introduction--><p>Defines constant values to be used with Pico Technology Instrument Drivers.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Class Definition</a></li><li><a href="#2">Example</a></li><li><a href="#3">See Also</a></li></ul></div><h2>Class Definition<a name="1"></a></h2><pre class="language-matlab">
+<span class="comment">% PICOCONSTANTS Defines constant values to be used with Pico Technology Instrument Drivers.</span>
+<span class="comment">%   The PicoConstants class defines a number of constant values that</span>
+<span class="comment">%   can be used to define the properties of an Oscilloscope device such</span>
+<span class="comment">%   as:</span>
+<span class="comment">%</span>
+<span class="comment">%   - Boolean values</span>
+<span class="comment">%   - Input voltage ranges</span>
+<span class="comment">%   - Signal generator type, </span>
+<span class="comment">%   - Arbitrary Waveform Generator (AWG) buffer size</span>
+<span class="comment">%   - Oscilloscope buffer memory size </span>
+<span class="comment">%   - Sampling rates </span>
+<span class="comment">%   - Bandwidth</span>
+<span class="comment">%   - AWG DAC Frequencies</span>
+<span class="comment">%</span>
+<span class="comment">%   Copyright: &copy; Pico Technology Limited 2013 - 2015. All rights</span>
+<span class="comment">%   reserved.</span>
+
+<span class="keyword">classdef</span> PicoConstants
+    
+<span class="keyword">properties</span>(Constant)
+    
+        <span class="comment">% Boolean</span>
+        FALSE = 0;
+        TRUE  = 1;
+        
+        <span class="comment">% Oscilloscope Input Ranges - defined in milliVolts</span>
+        SCOPE_INPUT_RANGES = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, <span class="keyword">...</span>
+            10000, 20000, 50000, 100000, 200000];
+        
+        <span class="comment">% Signal Generator Type</span>
+        SIG_GEN_NONE      = 0;
+        SIG_GEN_FUNCT_GEN = 1;
+        SIG_GEN_AWG       = 2;
+        
+        <span class="comment">% AWG Buffer Size (samples)</span>
+        AWG_BUFFER_ZERO = 0;
+        AWG_BUFFER_4KS  = pow2(12); <span class="comment">%4096</span>
+        AWG_BUFFER_8KS  = pow2(13); <span class="comment">%8192</span>
+        AWG_BUFFER_16KS = pow2(14); <span class="comment">%16384</span>
+        AWG_BUFFER_32KS = pow2(15); <span class="comment">%32768</span>
+        AWG_BUFFER_48KS = 49152;
+        
+        <span class="comment">% Buffer Sizes (samples)</span>
+        BUFFER_MEMORY_ZERO = 0;     
+        BUFFER_MEMORY_8KS   = pow2(13);
+        BUFFER_MEMORY_16KS  = pow2(14);
+        BUFFER_MEMORY_24KS  = 24576;
+        BUFFER_MEMORY_32KS  = pow2(15);
+        BUFFER_MEMORY_40KS  = 40960;
+        BUFFER_MEMORY_48KS  = 49152;
+        
+        BUFFER_MEMORY_4MS   = pow2(22);
+        BUFFER_MEMORY_8MS   = pow2(23);
+        BUFFER_MEMORY_16MS  = pow2(24);
+        BUFFER_MEMORY_32MS  = pow2(25);
+        BUFFER_MEMORY_64MS  = pow2(26);
+        BUFFER_MEMORY_128MS = pow2(27);
+        BUFFER_MEMORY_250MS = 250 * power(1024, 2);
+        BUFFER_MEMORY_256MS = pow2(28);
+        BUFFER_MEMORY_512MS = pow2(29);
+        BUFFER_MEMORY_1GS = pow2(30);
+        BUFFER_MEMORY_2GS = pow2(31);
+        
+        <span class="comment">% Sampling rates (per second)</span>
+        MAX_SAMPLING_RATE_ZERO    = 0;
+        MAX_SAMPLING_RATE_10MSPS  = 10e6;  <span class="comment">%1000000</span>
+        MAX_SAMPLING_RATE_20MSPS  = 20e6;  <span class="comment">%2000000</span>
+        MAX_SAMPLING_RATE_40MSPS  = 40e6;  <span class="comment">%4000000</span>
+        MAX_SAMPLING_RATE_50MSPS  = 50e6;  <span class="comment">%5000000</span>
+        MAX_SAMPLING_RATE_80MSPS  = 80e6;  <span class="comment">%8000000</span>
+        MAX_SAMPLING_RATE_100MSPS = 100e6; <span class="comment">%10000000</span>
+        MAX_SAMPLING_RATE_125MSPS = 125e6; <span class="comment">%12500000</span>
+        MAX_SAMPLING_RATE_200MSPS = 200e6; <span class="comment">%20000000</span>
+        MAX_SAMPLING_RATE_250MSPS = 250e6; <span class="comment">%25000000</span>
+        MAX_SAMPLING_RATE_400MSPS = 400e6; <span class="comment">%40000000</span>
+        MAX_SAMPLING_RATE_500MSPS = 500e6; <span class="comment">%50000000</span>
+        MAX_SAMPLING_RATE_1GSPS   = 1e9;   <span class="comment">%100000000</span>
+        MAX_SAMPLING_RATE_5GSPS   = 5e9;   <span class="comment">%100000000</span>
+        
+        <span class="comment">% Bandwidth definitions</span>
+        BANDWIDTH_ZERO   = 0;
+        BANDWIDTH_5MHZ  = 5e6;
+        BANDWIDTH_10MHZ  = 10e6;
+        BANDWIDTH_20MHZ  = 20e6;
+        BANDWIDTH_25MHZ  = 25e6;
+        BANDWIDTH_50MHZ  = 50e6;
+        BANDWIDTH_60MHZ  = 60e6;
+        BANDWIDTH_70MHZ  = 70e6;
+        BANDWIDTH_100MHZ = 100e6;
+        BANDWIDTH_200MHZ = 200e6;
+        BANDWIDTH_250MHZ = 250e6;
+        BANDWIDTH_350MHZ = 350e6;
+        BANDWIDTH_500MHZ = 500e6;
+        BANDWIDTH_1GHZ = 1e9;
+        
+        <span class="comment">% AWG DAC Frequencies</span>
+        AWG_DAC_FREQUENCY_ZERO   = 0;
+        AWG_DAC_FREQUENCY_2MHZ   = 2e6;
+        AWG_DAC_FREQUENCY_20MHZ  = 20e6;
+        AWG_DAC_FREQUENCY_80MHZ  = 80e6;
+        AWG_DAC_FREQUENCY_100MHZ = 100e6;
+        AWG_DAC_FREQUENCY_200MHZ = 200e6;
+        
+        <span class="comment">% Phase Accumulator (32 bit)</span>
+        AWG_PHASE_ACCUMULATOR = pow2(32); <span class="comment">%4294967296.0</span>
+        
+        <span class="comment">% Define Single, Dual, Quad and Octo Analogue Channels   </span>
+        SINGLE_SCOPE = 1;
+        DUAL_SCOPE   = 2;
+        QUAD_SCOPE   = 4;
+        OCTO_SCOPE   = 8;
+        
+        <span class="comment">% MSO Oscilloscope Modes</span>
+        MODE_ANALOGUE   = 0;
+        MODE_DIGITAL    = 1;
+        MODE_AGGREGATED = 2;
+        MODE_MIXED      = 3;
+        
+    <span class="keyword">end</span>
+    
+<span class="keyword">end</span>
+
+</pre><h2>Example<a name="2"></a></h2><p>Use the dot notation to access the properties of the class. In this example, the SCOPE_INPUT_RANGES property of the class will be accessed.</p><pre class="codeinput">Y = PicoConstants.SCOPE_INPUT_RANGES
+</pre><pre class="codeoutput">
+Y =
+
+  Columns 1 through 6
+
+          10          20          50         100         200         500
+
+  Columns 7 through 12
+
+        1000        2000        5000       10000       20000       50000
+
+  Columns 13 through 14
+
+      100000      200000
+
+</pre><h2>See Also<a name="3"></a></h2><p><a href="picostatus_help.html"><tt>PicoStatus</tt></a></p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% PicoConstants
+% Defines constant values to be used with Pico Technology Instrument Drivers.
+
+%% Class Definition
+%
+% <include>PicoConstants.m</include>
+
+%% Example
+% Use the dot notation to access the properties of the class. In this
+% example, the SCOPE_INPUT_RANGES property of the class will be accessed.
+
+Y = PicoConstants.SCOPE_INPUT_RANGES
+
+%% See Also
+%
+% <picostatus_help.html |PicoStatus|>
+
+%%
+%
+% *Copyright:* © 2015 Pico Technology Ltd. All rights reserved.
+
+
+
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<toc version="2.0">
+<!-- First tocitem specifies top level in Help browser Contents pane -->
+<!-- This can be a roadmap page, as shown below, or a content page -->
+    <tocitem target="ps_tbx_product_page.html">PicoScope® Support Toolbox
+        <!-- Getting Started Guide -->
+        <tocitem target="ps_tbx_gs.html" image="HelpIcon.GETTING_STARTED">
+            Getting Started with the PicoScope Support Toolbox
+            <tocitem target="ps_tbx_system_requirements.html">System Requirements
+            </tocitem>
+        </tocitem>
+        <!-- Class reference next -->
+        <tocitem target="ps_tbx_classes.html" 
+                 image="HelpIcon.USER_GUIDE">Classes
+            <tocitem target="picoconstants_help.html">PicoConstants</tocitem>
+            <tocitem target="picostatus_help.html">PicoStatus</tocitem>
+        </tocitem>             
+        <!-- Function reference next -->
+        <tocitem target="ps_tbx_functions.html" 
+                 image="HelpIcon.FUNCTION">Functions
+            <tocitem target="adc2mv_help.html">adc2mv</tocitem>
+            <tocitem target="freq2delta_help.html">freq2delta</tocitem>
+            <tocitem target="importAWGFile_help.html">importAWGFile</tocitem>
+            <tocitem target="mv2adc_help.html">mv2adc</tocitem>
+            <tocitem target="normalise_help.html">normalise</tocitem>
+            <tocitem target="questionDialog_help.html">questionDialog</tocitem>
+            <tocitem target="stopButton_help.html">stopButton</tocitem>
+            <tocitem target="timeunits_help.html">timeunits</tocitem>  
+        </tocitem>
+        <tocitem target="ps_tbx_release_notes.html" image="HelpIcon.RELEASE_NOTES">Release Notes
+        </tocitem>    
+        <!-- Optional link or links to your or other Web sites -->
+        <tocitem target="http://www.picotech.com" 
+                 image="$toolbox/matlab/icons/webicon.gif">
+        Pico Technology Web Site
+        </tocitem>
+    </tocitem>
+</toc>

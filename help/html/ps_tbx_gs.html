@@ -1,0 +1,105 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Getting Started with the PicoScope Support Toolbox</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-10-26"><meta name="DC.source" content="ps_tbx_gs.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Getting Started with the PicoScope Support Toolbox</h1><!--introduction--><p>Welcome to the PicoScope Support Toolbox!</p><p>This guide will help you with using the classes and functions provided in this toolbox whether you are using the PicoScope Instrument Drivers or calling the driver Application Protocol Interface (API) functions directly from MATLAB.</p><p>The sections below provide a brief description of what is provided in the toolbox - use the links provided to view further information.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Classes</a></li><li><a href="#2">Functions</a></li></ul></div><h2>Classes<a name="1"></a></h2><p>PicoScope Support Toolbox provides <a href="ps_tbx_classes.html">classes</a> with defined constant properties that may be used when communicating with PicoScope hardware products, including status codes which are returned by functions in most PicoScope drivers.</p><h2>Functions<a name="2"></a></h2><p>PicoScope Support Toolbox provides <a href="ps_tbx_functions.html">functions</a> that can assist with the following:</p><div><ul><li>Converting between Analogue Digital Converter values and millivolts.</li><li>Graphical User Interface (GUI) components that can be used when collecting data using a PicoScope hardware product in streaming mode.</li><li>Importing an arbitrary waveform from a file.</li><li>Normalising vectors defining arbitrary waveforms.</li></ul></div><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Getting Started with the PicoScope Support Toolbox
+% Welcome to the PicoScope Support Toolbox!
+%
+% This guide will help you with using the classes and functions provided in
+% this toolbox whether you are using the PicoScope Instrument Drivers or
+% calling the driver Application Protocol Interface (API) functions
+% directly from MATLAB.
+%
+% The sections below provide a brief description of what is provided in the
+% toolbox - use the links provided to view further information.
+
+%% Classes
+%
+% PicoScope Support Toolbox provides <ps_tbx_classes.html classes> with
+% defined constant properties that may be used when communicating with
+% PicoScope hardware products, including status codes which are returned by
+% functions in most PicoScope drivers.
+
+%% Functions
+%
+% PicoScope Support Toolbox provides <ps_tbx_functions.html functions> that
+% can assist with the following:
+%
+% * Converting between Analogue Digital Converter values and millivolts.
+% * Graphical User Interface (GUI) components that can be used when
+% collecting data using a PicoScope hardware product in streaming mode.
+% * Importing an arbitrary waveform from a file.
+% * Normalising vectors defining arbitrary waveforms.
+
+%%
+%
+% *Copyright:* © 2015 Pico Technology Ltd. All rights reserved.
+
+##### SOURCE END #####
+--></body></html>
