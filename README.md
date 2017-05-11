@@ -21,7 +21,7 @@ Please visit our [Support page](https://www.picotech.com/tech-support) to contac
 
 Issues can be reported via the [Issues tab](https://github.com/picotech/picosdk-matlab-picoscope-support-toolbox/issues).
 
-Please leave a comment and rating for this submission on our [MATLAB Central File Exchange page](https://uk.mathworks.com/matlabcentral/fileexchange/48311-picoscope-6000-series-matlab-generic-instrument-driver).
+Please leave a comment and rating for this submission on our [MATLAB Central File Exchange page](https://uk.mathworks.com/matlabcentral/fileexchange/53681-picoscope-support-toolbox).
 
 ## Copyright and licensing
 
