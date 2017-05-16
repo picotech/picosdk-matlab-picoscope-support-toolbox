@@ -37,4 +37,4 @@ picosdk-matlab-picoscope-support-toolbox is Copyright (C) 2015 - 2017 Pico Techn
 
 ## Code of conduct
 
-Please read our [Code of Conduct](.github/CODE_OF_CONDUCT.md)
+Please refer to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
