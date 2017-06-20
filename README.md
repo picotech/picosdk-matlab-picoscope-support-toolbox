@@ -23,9 +23,13 @@ Issues can be reported via the [Issues tab](https://github.com/picotech/picosdk-
 
 Please leave a comment and rating for this submission on our [MATLAB Central File Exchange page](https://uk.mathworks.com/matlabcentral/fileexchange/53681-picoscope-support-toolbox).
 
+## Code of conduct
+
+Please refer to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
+
 ## Copyright and licensing
 
-picosdk-matlab-picoscope-support-toolbox is Copyright (C) 2015 - 2017 Pico Technology Ltd. All rights reserved. See [LICENSE.md](LICENSE.md) for license terms. 
+See [LICENSE.md](LICENSE.md) for license terms. 
 
 *PicoScope* is a registered trademark of Pico Technology Ltd. 
 
@@ -35,6 +39,4 @@ picosdk-matlab-picoscope-support-toolbox is Copyright (C) 2015 - 2017 Pico Techn
 
 *Linux* is the registered trademark of Linus Torvalds in the U.S. and other countries.
 
-## Code of conduct
-
-Please refer to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
+Copyright © 2015-2017 Pico Technology Ltd. All rights reserved.
