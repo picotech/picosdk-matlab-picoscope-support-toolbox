@@ -15,6 +15,13 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 
 * MATLAB 2015b is recommended for 32-bit versions of MATLAB on Microsoft Windows operating systems.
 
+### Installing the PicoScope Support Toolbox files
+
+We recommend using the [Add-Ons Explorer](https://uk.mathworks.com/help/matlab/matlab_env/get-add-ons.html) in MATLAB in order to install these files and obtain updates.
+
+If your version of MATLAB does not have the Add-Ons Explorer, download the zip file from the [MATLAB Central File Exchange page](https://uk.mathworks.com/matlabcentral/fileexchange/53681-picoscope-support-toolbox)
+ and add the root and sub-folders to the MATLAB path.
+
 ## Obtaining support
 
 Please visit our [Support page](https://www.picotech.com/tech-support) to contact us directly or visit our [Test and Measurement Forum](https://www.picotech.com/support/forum71.html) to post questions.
@@ -39,4 +46,4 @@ See [LICENSE.md](LICENSE.md) for license terms.
 
 *Linux* is the registered trademark of Linus Torvalds in the U.S. and other countries.
 
-Copyright © 2015-2017 Pico Technology Ltd. All rights reserved.
+Copyright Â© 2015-2017 Pico Technology Ltd. All rights reserved.
