@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>normalise</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-10-26"><meta name="DC.source" content="normalise_help.m"><style type="text/css">
+      --><title>normalise</title><meta name="generator" content="MATLAB 9.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-08-16"><meta name="DC.source" content="normalise_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,37 +66,37 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>normalise</h1><!--introduction--><p>Normalise a vector or matrix.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#5">Output Arguments</a></li><li><a href="#6">Acknowledgement</a></li><li><a href="#7">See Also</a></li></ul></div><h2>Syntax<a name="1"></a></h2><p>Y = normalise(X)</p><h2>Description<a name="2"></a></h2><p>normalise(X) normalises the values in the vector or matrix X to the range -1 to +1.</p><h2>Example<a name="3"></a></h2><pre class="codeinput">X = randi([-10 10], 10, 1) <span class="comment">% Column vector of 10 values in the range -10 to +10</span>
+  </style></head><body><div class="content"><h1>normalise</h1><!--introduction--><p>Normalise a vector or matrix.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#5">Output Arguments</a></li><li><a href="#6">Acknowledgement</a></li><li><a href="#7">See Also</a></li></ul></div><h2 id="1">Syntax</h2><p>Y = normalise(X)</p><h2 id="2">Description</h2><p>normalise(X) normalises the values in the vector or matrix X to the range -1 to +1.</p><h2 id="3">Example</h2><pre class="codeinput">X = randi([-10 10], 10, 1) <span class="comment">% Column vector of 10 values in the range -10 to +10</span>
 Y = normalise(X)
 </pre><pre class="codeoutput">
 X =
 
-     7
-     9
-    -8
-     9
-     3
-    -8
-    -5
-     1
+    -1
+   -10
     10
-    10
+    -7
+    -8
+    -3
+    -6
+     0
+    -3
+     9
 
 
 Y =
 
-    0.7000
-    0.9000
-   -0.8000
-    0.9000
-    0.3000
-   -0.8000
-   -0.5000
-    0.1000
+   -0.1000
+   -1.0000
     1.0000
-    1.0000
+   -0.7000
+   -0.8000
+   -0.3000
+   -0.6000
+         0
+   -0.3000
+    0.9000
 
-</pre><h2>Input Arguments<a name="4"></a></h2><p>X - the input vector or matrix of values (real, finite)</p><h2>Output Arguments<a name="5"></a></h2><p>Y - the normalised vector or matrix of values (real, finite)</p><h2>Acknowledgement<a name="6"></a></h2><p>This function is based on the <a href="http://www.mathworks.co.uk/matlabcentral/newsreader/view_thread/162772"><tt>normalization</tt></a> function provided by Steve Lord.</p><h2>See Also<a name="7"></a></h2><p><a href="matlab:doc('max')"><tt>max</tt></a> | <a href="matlab:doc('min')"><tt>min</tt></a> | <a href="matlab:doc('abs')"><tt>abs</tt></a></p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+</pre><h2 id="4">Input Arguments</h2><p>X - the input vector or matrix of values (real, finite)</p><h2 id="5">Output Arguments</h2><p>Y - the normalised vector or matrix of values (real, finite)</p><h2 id="6">Acknowledgement</h2><p>This function is based on the <a href="http://www.mathworks.co.uk/matlabcentral/newsreader/view_thread/162772"><tt>normalization</tt></a> function provided by Steve Lord.</p><h2 id="7">See Also</h2><p><a href="matlab:doc('max')"><tt>max</tt></a> | <a href="matlab:doc('min')"><tt>min</tt></a> | <a href="matlab:doc('abs')"><tt>abs</tt></a></p><p><b>Copyright:</b> &copy; 2015-2017 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% normalise
 % Normalise a vector or matrix.
@@ -136,7 +136,7 @@ Y = normalise(X)
 
 %%
 %
-% *Copyright:* © 2015 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2015-2017 Pico Technology Ltd. All rights reserved.
 
 
 

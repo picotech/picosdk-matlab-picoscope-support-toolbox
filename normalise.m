@@ -9,7 +9,7 @@ function x = normalise(x)
 %   Based on the normalization function provided by Steve Lord at 
 %   <http://www.mathworks.co.uk/matlabcentral/newsreader/view_thread/162772>
 %   
-%   Additions copyright © 2015 Pico Technology Ltd. All rights reserved.
+%   Additions Copyright © 2015-2017 Pico Technology Ltd. All rights reserved.
 
     % Validate input
     validateattributes(x, {'numeric'}, {'real', 'finite'});
@@ -35,7 +35,7 @@ function x = normalise(x)
     
     else
         
-        x = x / maxamplitude;
+        x = x ./ maxamplitude;
         
     end
 
