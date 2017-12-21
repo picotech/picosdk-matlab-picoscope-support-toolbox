@@ -3,7 +3,7 @@
 %   This file contains definitions for the PICO_INFO and PICO_STATUS data 
 %   values as defined in the PicoStatus.h header file.  
 %
-%   Copyright: © 2013 - 2015 Pico Technology Ltd. All rights
+%   Copyright: © 2013-2017 Pico Technology Ltd. All rights
 %   reserved.
 
 classdef PicoStatus
@@ -210,10 +210,118 @@ classdef PicoStatus
 
     PICO_SIGGEN_FREQUENCY_OUT_OF_RANGE				= hex2dec('00000138');
     
+    % The device's EEPROM is corrupt. Contact Pico Technology support: https://www.picotech.com/tech-support.
+    PICO_EEPROM2_CORRUPT							= hex2dec('00000139');
+
+    % The EEPROM has failed.
+    PICO_EEPROM2_FAIL								= hex2dec('0000013A');
+
+    % The serial buffer is too small for the required information.
+    PICO_SERIAL_BUFFER_TOO_SMALL					= hex2dec('0000013B');
+
+    % The signal generator trigger and the external clock have both been set.
+    % This is not allowed.
+    PICO_SIGGEN_TRIGGER_AND_EXTERNAL_CLOCK_CLASH    = hex2dec('0000013C');
+
+    % The AUX trigger was enabled and the external clock has been enabled, 
+    % so the AUX has been automatically disabled.
+    PICO_WARNING_SIGGEN_AUXIO_TRIGGER_DISABLED      = hex2dec('0000013D');
+
+    % The AUX I/O was set as a scope trigger and is now being set as a signal generator
+    % gating trigger. This is not allowed.
+    PICO_SIGGEN_GATING_AUXIO_NOT_AVAILABLE          = hex2dec('00000013E');
+
+    % The AUX I/O was set by the signal generator as a gating trigger and is now being set 
+    % as a scope trigger. This is not allowed.
+    PICO_SIGGEN_GATING_AUXIO_ENABLED				= hex2dec('00000013F');
+
+    % A resource has failed to initialise 
+    PICO_RESOURCE_ERROR								= hex2dec('00000140');
+
+    % The temperature type is out of range
+    PICO_TEMPERATURE_TYPE_INVALID					= hex2dec('000000141');
+
+    % A requested temperature type is not supported on this device
+    PICO_TEMPERATURE_TYPE_NOT_SUPPORTED				= hex2dec('000000142');
+
+    % A read/write to the device has timed out
+    PICO_TIMEOUT									= hex2dec('00000143');
+
+    % The device cannot be connected correctly
+    PICO_DEVICE_NOT_FUNCTIONING						= hex2dec('00000144');
+
+    % The driver has experienced an unknown error and is unable to recover from this error
+    PICO_INTERNAL_ERROR								= hex2dec('00000145');
+
+    % Used when opening units via IP and more than multiple units have the same ip address
+    PICO_MULTIPLE_DEVICES_FOUND						= hex2dec('00000146');
+
+    PICO_WARNING_NUMBER_OF_SEGMENTS_REDUCED 	 	= hex2dec('00000147');
+
+    % The calibration pin states argument is out of range
+    PICO_CAL_PINS_STATES							= hex2dec('00000148');
+
+    % The calibration pin frequency argument is out of range
+    PICO_CAL_PINS_FREQUENCY							= hex2dec('00000149');
+
+    % The calibration pin amplitude argument is out of range
+    PICO_CAL_PINS_AMPLITUDE							= hex2dec('0000014A');
+
+    % The calibration pin wavetype argument is out of range
+    PICO_CAL_PINS_WAVETYPE							= hex2dec('0000014B');
+
+    % The calibration pin offset argument is out of range
+    PICO_CAL_PINS_OFFSET							= hex2dec('0000014C');
+
+    % The probe's identity has a problem
+    PICO_PROBE_FAULT								= hex2dec('0000014D');
+
+    % The probe has not been identified
+    PICO_PROBE_IDENTITY_UNKNOWN						= hex2dec('0000014E');
+
+    % Enabling the probe would cause the device to exceed the allowable current limit
+    PICO_PROBE_POWER_DC_POWER_SUPPLY_REQUIRED       = hex2dec('0000014F');
+
+    % The DC power supply is connected; enabling the probe would cause the device to exceed the
+    % allowable current limit
+    PICO_PROBE_NOT_POWERED_WITH_DC_POWER_SUPPLY     = hex2dec('00000150');
+
+    % Failed to complete probe configuration
+	PICO_PROBE_CONFIG_FAILURE						= hex2dec('00000151');
+
+    % Failed to set the callback function, as currently in current callback function
+	PICO_PROBE_INTERACTION_CALLBACK					= hex2dec('00000152');
+
+    % The probe has been verified but not know on this driver
+	PICO_UNKNOWN_INTELLIGENT_PROBE					= hex2dec('00000153');
+
+    % The intelligent probe cannot be verified
+	PICO_INTELLIGENT_PROBE_CORRUPT					= hex2dec('00000154');
+
+    % The callback is null, probe collection will only start when 
+    % first callback is a none null pointer
+    PICO_PROBE_COLLECTION_NOT_STARTED				= hex2dec('00000155');
+
+    % The current drawn by the probe(s) has exceeded the allowed limit
+    PICO_PROBE_POWER_CONSUMPTION_EXCEEDED           = hex2dec('00000156');
+
+    % The channel range limits have changed due to connecting or disconnecting a probe
+    % the channel has been enabled
+    PICO_WARNING_PROBE_CHANNEL_OUT_OF_SYNC          = hex2dec('00000157');
+    
     PICO_DEVICE_TIME_STAMP_RESET                    = hex2dec('01000000');
     
     PICO_WATCHDOGTIMER                              = hex2dec('10000000');
     
+    % The picoipp.dll has not been found.
+    PICO_IPP_NOT_FOUND                				= hex2dec('10000001');
+
+    % A function in the picoipp.dll does not exist.
+    PICO_IPP_NO_FUNCTION					        = hex2dec('10000002');
+
+    % The Pico IPP call has failed.
+    PICO_IPP_ERROR					                = hex2dec('10000003');
+
     end
     
 end
