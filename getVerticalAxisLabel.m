@@ -1,7 +1,7 @@
 function [label] = getVerticalAxisLabel(unit)
 % getVerticalAxisLabel Obtain a label to use on a vertical axis.
 %   getVerticalAxisLabel(X) returns a suitable label for the vertical axis
-%   based on the unit X which should be one of the following:
+%   on a plot based on the unit X which should be one of the following:
 %
 %   * A - amps
 %   * mV - millivoltss
