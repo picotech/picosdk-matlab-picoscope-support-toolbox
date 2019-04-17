@@ -1,6 +1,6 @@
 # PicoScope Support Toolbox
 
-The PicoScope Support Toolbox provides a set of classes and functions for use with Pico Technology Instrument Drivers or calling the shared library Application Protocol Interface (API) functions directly from MATLAB when communicating with PicoScope PC Oscilloscopes. 
+The PicoScope Support Toolbox provides a set of classes and functions for use with Pico Technology Instrument Drivers or calling the shared library Application Protocol Interface (API) functions directly from MATLAB when communicating with PicoScope<sup>®</sup> PC Oscilloscopes. 
 This toolbox contains Help documentation that can be accessed via the Documentation page in the MATLAB Help menu.
 
 Users downloading the zip file will need to add the root folder and sub-folders to the MATLAB path.
@@ -46,4 +46,4 @@ See [LICENSE.md](LICENSE.md) for license terms.
 
 *Linux* is the registered trademark of Linus Torvalds in the U.S. and other countries.
 
-Copyright © 2015-2017 Pico Technology Ltd. All rights reserved.
+Copyright © 2015-2018 Pico Technology Ltd. All rights reserved.
