@@ -13,10 +13,10 @@ function timeUnitsStr = timeunits(timeUnit)
 %        4: Milliseconds
 %        5: Seconds
 %
-%   Applies only to the PicoScope 2000 Series devices using the ps2000 API
-%   functions.
+%   Applies only to the PicoScope 2000 Series devices using the ps2000 
+%   driver API functions.
 %
-%   Copyright: © 2013 - 2015 Pico Technology Ltd. All rights reserved.
+%   Copyright: © 2013-2019 Pico Technology Ltd. All rights reserved.
 
     % Validate input argument
     validateattributes(timeUnit, {'numeric'}, {'scalar', 'integer', '>=', -1, '<=', 6});
