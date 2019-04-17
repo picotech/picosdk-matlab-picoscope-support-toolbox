@@ -9,7 +9,7 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 
 ### Prerequisites
 
-* [MATLAB](https://uk.mathworks.com/products/matlab.html) for Microsoft Windows (32- or 64-bit) or Linux operating systems (64-bit).
+* [MATLAB](https://uk.mathworks.com/products/matlab.html) for Microsoft Windows or Linux operating systems (64-bit).
 
 **Notes:**
 
@@ -46,4 +46,4 @@ See [LICENSE.md](LICENSE.md) for license terms.
 
 *Linux* is the registered trademark of Linus Torvalds in the U.S. and other countries.
 
-Copyright Â© 2015-2018 Pico Technology Ltd. All rights reserved.
+Copyright © 2015-2019 Pico Technology Ltd. All rights reserved.
