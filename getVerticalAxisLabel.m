@@ -1,5 +1,5 @@
 function [label] = getVerticalAxisLabel(unit)
-% getVerticalAxisLabel Obtain a label to use on a vertical axis.
+% getVerticalAxisLabel Obtain a label to use on a vertical axis of a plot.
 %   getVerticalAxisLabel(X) returns a suitable label for the vertical axis
 %   on a plot based on the unit X which should be one of the following:
 %
