@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>freq2delta</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-10-26"><meta name="DC.source" content="freq2delta_help.m"><style type="text/css">
+      --><title>freq2delta</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-17"><meta name="DC.source" content="freq2delta_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,19 +66,21 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>freq2delta</h1><!--introduction--><p>Convert frequency to delta value for PicoScope Arbitrary Waveform Generators.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#5">Output Arguments</a></li></ul></div><h2>Syntax<a name="1"></a></h2><pre class="language-matlab">P = freq2delta(F, W, B, D)
-</pre><h2>Description<a name="2"></a></h2><p>freq2delta(F, W, B, D) converts a frequency value F in hertz into a uint32 delta phase value using the waveform size W, maximum buffer size of the PicoScope device B and DAC Frequency of the Arbitrary Waveform Generator (AWG), D.</p><h2>Example<a name="3"></a></h2><pre class="codeinput">F = 1000;  <span class="comment">% Hz</span>
-W = 16384; <span class="comment">% Samples</span>
-B = 32768; <span class="comment">% Samples</span>
-D = 20e6;  <span class="comment">% 20MS/s</span>
+  </style></head><body><div class="content"><h1>freq2delta</h1><!--introduction--><p>Convert frequency to delta value for PicoScope Arbitrary Waveform Generators.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#5">Output Arguments</a></li></ul></div><h2 id="1">Syntax</h2><pre class="language-matlab">P = freq2delta(F, W, B, D)
+</pre><h2 id="2">Description</h2><p>freq2delta(F, W, B, D) converts a frequency value F in hertz into a uint32 delta phase value using the waveform size W, maximum buffer size of the PicoScope device B and DAC Frequency of the Arbitrary Waveform Generator (AWG), D.</p><h2 id="3">Example</h2><pre class="codeinput">F = 1000;  <span class="comment">% Hz</span>
+W = 16384; <span class="comment">% samples</span>
+B = 32768; <span class="comment">% samples</span>
+D = 20e6;  <span class="comment">% 20 MS/s</span>
 
 P = freq2delta(F, W, B, D)
 </pre><pre class="codeoutput">
 P =
 
-      107374
+  uint32
 
-</pre><h2>Input Arguments<a name="4"></a></h2><div><ul><li>F - the frequency in hertz (scalar or vector of 2 elements)</li><li>W - waveform size in samples (positive integer scalar)</li><li>B - maximum buffer size of the AWG in samples (positive integer scalar)</li><li>D - the DAC Frequency of the AWG in Megasamples per second (real finite positive scalar value)</li></ul></div><h2>Output Arguments<a name="5"></a></h2><div><ul><li>P - the delta phase value corresponding to the frequency specified (uint32 datatype scalar value)</li></ul></div><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+   107374
+
+</pre><h2 id="4">Input Arguments</h2><div><ul><li>F - the frequency in hertz (scalar or vector of 2 elements)</li><li>W - waveform size in samples (positive integer scalar)</li><li>B - maximum buffer size of the AWG in samples (positive integer scalar)</li><li>D - the DAC Frequency of the AWG in Megasamples per second (real finite positive scalar value)</li></ul></div><h2 id="5">Output Arguments</h2><div><ul><li>P - the delta phase value corresponding to the frequency specified (uint32 datatype scalar value)</li></ul></div><p><b>Copyright:</b> &copy; 2015-2019 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% freq2delta
 % Convert frequency to delta value for PicoScope Arbitrary Waveform Generators.
@@ -98,9 +100,9 @@ P =
 %% Example
 
 F = 1000;  % Hz
-W = 16384; % Samples
-B = 32768; % Samples
-D = 20e6;  % 20MS/s
+W = 16384; % samples
+B = 32768; % samples
+D = 20e6;  % 20 MS/s
 
 P = freq2delta(F, W, B, D)
 
@@ -118,7 +120,7 @@ P = freq2delta(F, W, B, D)
 
 %%
 %
-% *Copyright:* © 2015 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2015-2019 Pico Technology Ltd. All rights reserved.
 
 ##### SOURCE END #####
 --></body></html>

@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>questionDialog</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-10-26"><meta name="DC.source" content="questionDialog_help.m"><style type="text/css">
+      --><title>questionDialog</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-17"><meta name="DC.source" content="questionDialog_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>questionDialog</h1><!--introduction--><p>Dialog prompting a User to respond 'Yes' or 'No' to a question.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#5">Input Arguments</a></li><li><a href="#6">Output Arguments</a></li><li><a href="#7">See Also</a></li></ul></div><h2>Syntax<a name="1"></a></h2><p>R = questionDialog(Q, T)</p><h2>Description<a name="2"></a></h2><p>R = questionDialog(Q, T) displays a dialog with question Q and title T prompting the User to respond 'Yes' or 'No'.</p><p>If 'Yes' is clicked, R = 1, otherwise R = 0 if 'No' is clicked.</p><h2>Example<a name="3"></a></h2><pre class="codeinput">Q = <span class="string">'Plot live streaming data?'</span>;
+  </style></head><body><div class="content"><h1>questionDialog</h1><!--introduction--><p>Dialog prompting a User to respond 'Yes' or 'No' to a question.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#5">Input Arguments</a></li><li><a href="#6">Output Arguments</a></li><li><a href="#7">See Also</a></li></ul></div><h2 id="1">Syntax</h2><p>R = questionDialog(Q, T)</p><h2 id="2">Description</h2><p>R = questionDialog(Q, T) displays a dialog with question Q and title T prompting the User to respond 'Yes' or 'No'.</p><p>If 'Yes' is clicked, R = 1, otherwise R = 0 if 'No' is clicked.</p><h2 id="3">Example</h2><pre class="codeinput">Q = <span class="string">'Plot live streaming data?'</span>;
 T = <span class="string">'Streaming Data Plot'</span>;
 
 R = questionDialog(Q, T);
@@ -76,7 +76,7 @@ R =
 
      1
 
-</pre><h2>Input Arguments<a name="5"></a></h2><div><ul><li>Q - the question to be asked to the User (string)</li><li>T - the title to be displayed in the dialog (string)</li></ul></div><h2>Output Arguments<a name="6"></a></h2><div><ul><li>R - the response, 1 (Yes) or 0 (No)</li></ul></div><h2>See Also<a name="7"></a></h2><p><a href="matlab:doc('questdlg')"><tt>questdlg</tt></a></p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+</pre><h2 id="5">Input Arguments</h2><div><ul><li>Q - the question to be asked to the User (string)</li><li>T - the title to be displayed in the dialog (string)</li></ul></div><h2 id="6">Output Arguments</h2><div><ul><li>R - the response, 1 (Yes) or 0 (No)</li></ul></div><h2 id="7">See Also</h2><p><a href="matlab:doc('questdlg')"><tt>questdlg</tt></a></p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% questionDialog
 % Dialog prompting a User to respond 'Yes' or 'No' to a question.

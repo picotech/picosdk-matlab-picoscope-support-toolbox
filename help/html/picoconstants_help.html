@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>PicoConstants</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-10-26"><meta name="DC.source" content="picoconstants_help.m"><style type="text/css">
+      --><title>PicoConstants</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-17"><meta name="DC.source" content="picoconstants_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>PicoConstants</h1><!--introduction--><p>Defines constant values to be used with Pico Technology Instrument Drivers.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Class Definition</a></li><li><a href="#2">Example</a></li><li><a href="#3">See Also</a></li></ul></div><h2>Class Definition<a name="1"></a></h2><pre class="language-matlab">
+  </style></head><body><div class="content"><h1>PicoConstants</h1><!--introduction--><p>Defines constant values to be used with Pico Technology Instrument Drivers.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Class Definition</a></li><li><a href="#2">Example</a></li><li><a href="#3">See Also</a></li></ul></div><h2 id="1">Class Definition</h2><pre class="language-matlab">
 <span class="comment">% PICOCONSTANTS Defines constant values to be used with Pico Technology Instrument Drivers.</span>
 <span class="comment">%   The PicoConstants class defines a number of constant values that</span>
 <span class="comment">%   can be used to define the properties of an Oscilloscope device such</span>
@@ -81,7 +81,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 <span class="comment">%   - Bandwidth</span>
 <span class="comment">%   - AWG DAC Frequencies</span>
 <span class="comment">%</span>
-<span class="comment">%   Copyright: &copy; Pico Technology Limited 2013 - 2015. All rights</span>
+<span class="comment">%   Copyright: &copy; 2013-2019 Pico Technology Ltd. All rights</span>
 <span class="comment">%   reserved.</span>
 
 <span class="keyword">classdef</span> PicoConstants
@@ -92,9 +92,15 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
         FALSE = 0;
         TRUE  = 1;
         
-        <span class="comment">% Oscilloscope Input Ranges - defined in milliVolts</span>
+        <span class="comment">% Oscilloscope Input Ranges - defined in millivolts</span>
         SCOPE_INPUT_RANGES = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, <span class="keyword">...</span>
             10000, 20000, 50000, 100000, 200000];
+        
+        <span class="comment">% PicoConnect probe ranges</span>
+        PICO_CONNECT_PROBE_CURRENT_CLAMP_200_2KA_RANGES = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000]; <span class="comment">% Amps</span>
+        PICO_CONNECT_PROBE_CURRENT_CLAMP_40A_RANGES = [0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 40]; <span class="comment">% Amps</span>
+        PICO_CONNECT_PROBE_CAT3_HV_1KV_RANGES = [2.5, 5, 12.5, 25, 50, 125, 250, 500, 1000]; <span class="comment">% Volts</span>
+        PICO_CONNECT_PROBE_CURRENT_CLAMP_2000ARMS_RANGES = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000]; <span class="comment">% Volts</span>
         
         <span class="comment">% Signal Generator Type</span>
         SIG_GEN_NONE      = 0;
@@ -189,7 +195,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
     
 <span class="keyword">end</span>
 
-</pre><h2>Example<a name="2"></a></h2><p>Use the dot notation to access the properties of the class. In this example, the SCOPE_INPUT_RANGES property of the class will be accessed.</p><pre class="codeinput">Y = PicoConstants.SCOPE_INPUT_RANGES
+</pre><h2 id="2">Example</h2><p>Use the dot notation to access the properties of the class. In this example, the <tt>SCOPE_INPUT_RANGES</tt> property of the class will be accessed.</p><pre class="codeinput">Y = PicoConstants.SCOPE_INPUT_RANGES
 </pre><pre class="codeoutput">
 Y =
 
@@ -205,7 +211,7 @@ Y =
 
       100000      200000
 
-</pre><h2>See Also<a name="3"></a></h2><p><a href="picostatus_help.html"><tt>PicoStatus</tt></a></p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+</pre><h2 id="3">See Also</h2><p><a href="picostatus_help.html"><tt>PicoStatus</tt></a></p><p><b>Copyright:</b> &copy; 2015-2019 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% PicoConstants
 % Defines constant values to be used with Pico Technology Instrument Drivers.
@@ -216,7 +222,7 @@ Y =
 
 %% Example
 % Use the dot notation to access the properties of the class. In this
-% example, the SCOPE_INPUT_RANGES property of the class will be accessed.
+% example, the |SCOPE_INPUT_RANGES| property of the class will be accessed.
 
 Y = PicoConstants.SCOPE_INPUT_RANGES
 
@@ -226,7 +232,7 @@ Y = PicoConstants.SCOPE_INPUT_RANGES
 
 %%
 %
-% *Copyright:* © 2015 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2015-2019 Pico Technology Ltd. All rights reserved.
 
 
 

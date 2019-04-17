@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>timeunits</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-10-26"><meta name="DC.source" content="timeunits_help.m"><style type="text/css">
+      --><title>timeunits</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-17"><meta name="DC.source" content="timeunits_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,16 +66,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>timeunits</h1><!--introduction--><p>Returns a string representation of the time unit index.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#5">Output Arguments</a></li></ul></div><h2>Syntax<a name="1"></a></h2><pre class="language-matlab">U = timeunits(T)
-</pre><h2>Description<a name="2"></a></h2><p>timeunits(T) returns a string corresponding to the time unit index provided after incrementing the index by 1.</p><p>This function only applies to PicoScope 2000 Series devices using the ps2000 API functions.</p><h2>Example<a name="3"></a></h2><pre class="codeinput">T = 2; <span class="comment">% nanoseconds</span>
+  </style></head><body><div class="content"><h1>timeunits</h1><!--introduction--><p>Returns a string representation of the time unit index.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#5">Output Arguments</a></li></ul></div><h2 id="1">Syntax</h2><pre class="language-matlab">U = timeunits(T)
+</pre><h2 id="2">Description</h2><p>timeunits(T) returns a string corresponding to the time unit index provided after incrementing the index by 1.</p><p>This function only applies to PicoScope 2000 Series devices using the ps2000 driver API functions.</p><h2 id="3">Example</h2><pre class="codeinput">T = 2; <span class="comment">% nanoseconds</span>
 
 U = timeunits(T)
 </pre><pre class="codeoutput">
 U =
 
-ns
+    'ns'
 
-</pre><h2>Input Arguments<a name="4"></a></h2><div><ul><li>T - the time unit (a scalar value).</li></ul></div><p>This should be one of the following values:</p><div><ul><li>-1 (ADC counts)</li><li>0 (femtoseconds)</li><li>1 (picoseconds)</li><li>2 (nanoseconds)</li><li>3 (microseconds)</li><li>4 (milliseconds)</li><li>5 (seconds)</li></ul></div><h2>Output Arguments<a name="5"></a></h2><div><ul><li>U - a string corresponding to the time unit index selected.</li></ul></div><p><b>Note:</b> If T is set to -1, U will be returned as 'ADC'.</p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+</pre><h2 id="4">Input Arguments</h2><div><ul><li>T - the time unit (a scalar value).</li></ul></div><p>This should be one of the following values:</p><div><ul><li>-1 (ADC counts)</li><li>0 (femtoseconds)</li><li>1 (picoseconds)</li><li>2 (nanoseconds)</li><li>3 (microseconds)</li><li>4 (milliseconds)</li><li>5 (seconds)</li></ul></div><h2 id="5">Output Arguments</h2><div><ul><li>U - a string corresponding to the time unit index selected.</li></ul></div><p><b>Note:</b> If T is set to -1, U will be returned as 'ADC'.</p><p><b>Copyright:</b> &copy; 2015-2019 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% timeunits
 % Returns a string representation of the time unit index.
@@ -91,7 +91,7 @@ ns
 % provided after incrementing the index by 1. 
 %
 % This function only applies to PicoScope 2000 Series devices using the
-% ps2000 API functions.
+% ps2000 driver API functions.
 
 %% Example
 
@@ -121,7 +121,7 @@ U = timeunits(T)
 
 %% 
 %
-% *Copyright:* © 2015 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2015-2019 Pico Technology Ltd. All rights reserved.
 
 
 
