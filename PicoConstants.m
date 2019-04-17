@@ -12,7 +12,7 @@
 %   - Bandwidth
 %   - AWG DAC Frequencies
 %
-%   Copyright: © 2013 - 2015 Pico Technology Ltd. All rights
+%   Copyright: © 2013-2019 Pico Technology Ltd. All rights
 %   reserved.
 
 classdef PicoConstants
@@ -23,9 +23,15 @@ properties(Constant)
         FALSE = 0;
         TRUE  = 1;
         
-        % Oscilloscope Input Ranges - defined in milliVolts
+        % Oscilloscope Input Ranges - defined in millivolts
         SCOPE_INPUT_RANGES = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, ...
             10000, 20000, 50000, 100000, 200000];
+        
+        % PicoConnect probe ranges
+        PICO_CONNECT_PROBE_CURRENT_CLAMP_200_2KA_RANGES = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000]; % Amps
+        PICO_CONNECT_PROBE_CURRENT_CLAMP_40A_RANGES = [0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 40]; % Amps
+        PICO_CONNECT_PROBE_CAT3_HV_1KV_RANGES = [2.5, 5, 12.5, 25, 50, 125, 250, 500, 1000]; % Volts
+        PICO_CONNECT_PROBE_CURRENT_CLAMP_2000ARMS_RANGES = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000]; % Volts
         
         % Signal Generator Type
         SIG_GEN_NONE      = 0;
