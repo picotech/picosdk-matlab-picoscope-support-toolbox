@@ -4,7 +4,7 @@ function [label] = getVerticalAxisLabel(unit)
 %   on a plot based on the unit X which should be one of the following:
 %
 %   * A - amps
-%   * mV - millivoltss
+%   * mV - millivolts
 %   * V - volts
 %
 %   Copyright © 2019 Pico Technology Ltd. All rights reserved.
