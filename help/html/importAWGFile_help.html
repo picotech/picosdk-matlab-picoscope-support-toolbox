@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>importAWGFile</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-17"><meta name="DC.source" content="importAWGFile_help.m"><style type="text/css">
+      --><title>importAWGFile</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-07-24"><meta name="DC.source" content="importAWGFile_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -71,13 +71,51 @@ whos;
 
 awgArray = importAWGFile(<span class="string">'2205A_AWG_Sine.csv'</span>, 1, 2048);
 whos;
-</pre><pre class="codeoutput">  Name             Size            Bytes  Class     Attributes
+</pre><pre class="codeoutput">  Name                      Size             Bytes  Class     Attributes
 
-  awgArray      4096x1             32768  double              
+  B                         1x1                  8  double              
+  D                         1x1                  8  double              
+  F                         1x1                  8  double              
+  P                         1x1                  4  uint32              
+  Q                         1x25                50  char                
+  R                         1x1                  8  double              
+  T                         1x1                  8  double              
+  U                         1x2                  4  char                
+  W                         1x1                  8  double              
+  X                         1x1                  2  char                
+  Y                         1x11                22  char                
+  ans                       1x177              354  char                
+  awgArray               4096x1              32768  double              
+  flag                      1x1                  8  double              
+  maxValue                  1x1                  8  double              
+  n                         1x1                  8  double              
+  psTbxProject              1x1               1712  struct              
+  psTbx_doc_options         1x1                829  struct              
+  rootDir                   1x143              286  char                
+  voltageRange              1x1                  8  double              
 
-  Name             Size            Bytes  Class     Attributes
+  Name                      Size             Bytes  Class     Attributes
 
-  awgArray      2048x1             16384  double              
+  B                         1x1                  8  double              
+  D                         1x1                  8  double              
+  F                         1x1                  8  double              
+  P                         1x1                  4  uint32              
+  Q                         1x25                50  char                
+  R                         1x1                  8  double              
+  T                         1x1                  8  double              
+  U                         1x2                  4  char                
+  W                         1x1                  8  double              
+  X                         1x1                  2  char                
+  Y                         1x11                22  char                
+  ans                       1x177              354  char                
+  awgArray               2048x1              16384  double              
+  flag                      1x1                  8  double              
+  maxValue                  1x1                  8  double              
+  n                         1x1                  8  double              
+  psTbxProject              1x1               1712  struct              
+  psTbx_doc_options         1x1                829  struct              
+  rootDir                   1x143              286  char                
+  voltageRange              1x1                  8  double              
 
 </pre><h2 id="4">Input Arguments</h2><div><ul><li>FILENAME - name of the file from which data is to be read (string)</li><li>STARTROW - first row to read data from (scalar integer)</li><li>ENDROW - last row to read data from (scalar integer)</li></ul></div><h2 id="5">Output Arguments</h2><div><ul><li>AWGARRAY - column vector of numeric data read from FILENAME</li></ul></div><h2 id="6">See Also</h2><p><a href="matlab:doc('textscan')"><tt>textscan</tt></a></p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
 ##### SOURCE BEGIN #####

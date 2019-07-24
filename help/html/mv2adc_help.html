@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>getVerticalAxisLabel</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-17"><meta name="DC.source" content="mv2adc_help.m"><style type="text/css">
+      --><title>mv2adc</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-07-24"><meta name="DC.source" content="mv2adc_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,50 +66,67 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>getVerticalAxisLabel</h1><!--introduction--><p>Obtain a label to use on a vertical axis of a plot.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#5">Output Arguments</a></li></ul></div><h2 id="1">Syntax</h2><pre class="language-matlab">Y = getVerticalAxisLabel(X)
-</pre><h2 id="2">Description</h2><p>getVerticalAxisLabel(X) returns a suitable label for the vertical axis on a plot based on the unit X which should be one of the following:</p><div><ul><li>A - amps</li><li>mV - millivolts</li><li>V - volts</li></ul></div><h2 id="3">Example</h2><pre class="codeinput">X = <span class="string">'V'</span>;
+  </style></head><body><div class="content"><h1>mv2adc</h1><!--introduction--><p>Converts millivolt values to Analogue to Digital Converter count values.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#6">Output Arguments</a></li><li><a href="#7">See Also</a></li></ul></div><h2 id="1">Syntax</h2><pre class="language-matlab">Y = mv2adc(X, voltageRange, maxValue)
+</pre><h2 id="2">Description</h2><p>mv2adc(X, voltageRange, maxValue) returns an Analogue to Digital Converter count value corresponding for the input value X scaled according to the voltage range specified.</p><h2 id="3">Example</h2><pre class="codeinput">X = [-500, -250, 0, 250, 500];
+voltageRange = 1000; <span class="comment">% &plusmn;1 V range</span>
+maxValue = 32512;
 
-Y = getVerticalAxisLabel(X)
+Y = mv2adc(X, voltageRange, maxValue)
 </pre><pre class="codeoutput">
 Y =
 
-    'Voltage (V)'
+  1&times;5 int32 row vector
 
-</pre><h2 id="4">Input Arguments</h2><div><ul><li>X - the unit to be used.</li></ul></div><h2 id="5">Output Arguments</h2><div><ul><li>Y - a label based on the specified input.</li></ul></div><p><b>Copyright:</b> &copy; 2019 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
+   -16256    -8128        0     8128    16256
+
+</pre><h2 id="4">Input Arguments</h2><div><ul><li>X - the raw ADC value(s), (scalar, vector or matrix of real, finite with no NaN (Not a Number) elements)</li><li>voltageRange - the voltage range used for the channel (positive, non-zero integer scalar value, in millivolts)</li><li>maxValue - the maximum ADC value corresponding to the resolution for the device (positive, non-zero integer scalar value)</li></ul></div><p>The units for voltageRange can be changed e.g. volts.</p><h2 id="6">Output Arguments</h2><div><ul><li>Y - the converted values (scalar, vector or matrix of 32-bit integers; in millivolts).</li></ul></div><p><b>Note:</b> If a different unit is used for the input X, then Y will have the corresponding units.</p><h2 id="7">See Also</h2><p><a href="adc2mv_help.html"><tt>adc2mv</tt></a></p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% getVerticalAxisLabel
-% Obtain a label to use on a vertical axis of a plot.
+%% mv2adc
+% Converts millivolt values to Analogue to Digital Converter count values.
 
 %% Syntax
 %
-%   Y = getVerticalAxisLabel(X)
+%   Y = mv2adc(X, voltageRange, maxValue)
 %
 
 %% Description
 %
-% getVerticalAxisLabel(X) returns a suitable label for the vertical axis
-% on a plot based on the unit X which should be one of the following:
-%
-% * A - amps
-% * mV - millivolts
-% * V - volts
+% mv2adc(X, voltageRange, maxValue) returns an Analogue to Digital
+% Converter count value corresponding for the input value X scaled
+% according to the voltage range specified.
 
 %% Example
 
-X = 'V';
+X = [-500, -250, 0, 250, 500];
+voltageRange = 1000; % ±1 V range
+maxValue = 32512;
 
-Y = getVerticalAxisLabel(X)
+Y = mv2adc(X, voltageRange, maxValue)
 
 %% Input Arguments
 %
-% * X - the unit to be used.
+% * X - the raw ADC value(s), (scalar, vector or matrix of real, finite with no NaN (Not a Number) elements)
+% * voltageRange - the voltage range used for the channel (positive, non-zero integer scalar value, in millivolts)
+% * maxValue - the maximum ADC value corresponding to the resolution for the device (positive, non-zero integer scalar value)
+
+%%
+% The units for voltageRange can be changed e.g. volts.
 
 %% Output Arguments
 %
-% * Y - a label based on the specified input.
+% * Y - the converted values (scalar, vector or matrix of 32-bit integers; in millivolts).
+%
+% *Note:* If a different unit is used for the input X, then Y will have the corresponding units.
+
+%% See Also
+%
+% <adc2mv_help.html |adc2mv|>
 
 %%
 %
-% *Copyright:* © 2019 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2015 Pico Technology Ltd. All rights reserved.
+
+
+
 ##### SOURCE END #####
 --></body></html>

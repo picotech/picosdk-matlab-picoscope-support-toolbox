@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>freq2delta</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-17"><meta name="DC.source" content="freq2delta_help.m"><style type="text/css">
+      --><title>freq2delta</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-07-24"><meta name="DC.source" content="freq2delta_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -80,7 +80,7 @@ P =
 
    107374
 
-</pre><h2 id="4">Input Arguments</h2><div><ul><li>F - the frequency in hertz (scalar or vector of 2 elements)</li><li>W - waveform size in samples (positive integer scalar)</li><li>B - maximum buffer size of the AWG in samples (positive integer scalar)</li><li>D - the DAC Frequency of the AWG in Megasamples per second (real finite positive scalar value)</li></ul></div><h2 id="5">Output Arguments</h2><div><ul><li>P - the delta phase value corresponding to the frequency specified (uint32 datatype scalar value)</li></ul></div><p><b>Copyright:</b> &copy; 2015-2019 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
+</pre><h2 id="4">Input Arguments</h2><div><ul><li>F - the frequency in hertz (scalar or vector of 2 elements)</li><li>W - waveform size in samples (positive integer scalar)</li><li>B - maximum buffer size of the AWG in samples (positive integer scalar)</li><li>D - the DAC Frequency of the AWG in megasamples per second (real finite positive scalar value)</li></ul></div><h2 id="5">Output Arguments</h2><div><ul><li>P - the delta phase value corresponding to the frequency specified (uint32 datatype scalar value)</li></ul></div><p><b>Copyright:</b> &copy; 2015-2019 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% freq2delta
 % Convert frequency to delta value for PicoScope Arbitrary Waveform Generators.
@@ -111,7 +111,7 @@ P = freq2delta(F, W, B, D)
 % * F - the frequency in hertz (scalar or vector of 2 elements)
 % * W - waveform size in samples (positive integer scalar)
 % * B - maximum buffer size of the AWG in samples (positive integer scalar)
-% * D - the DAC Frequency of the AWG in Megasamples per second (real finite positive scalar value)
+% * D - the DAC Frequency of the AWG in megasamples per second (real finite positive scalar value)
 %
 
 %% Output Arguments

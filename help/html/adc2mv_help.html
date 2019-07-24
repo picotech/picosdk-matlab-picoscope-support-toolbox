@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>adc2mv</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-17"><meta name="DC.source" content="adc2mv_help.m"><style type="text/css">
+      --><title>adc2mv</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-07-24"><meta name="DC.source" content="adc2mv_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,9 +66,9 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>adc2mv</h1><!--introduction--><p>Converts raw Analogue to Digital Converter count values to millivolts.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#6">Output Arguments</a></li><li><a href="#8">See Also</a></li></ul></div><h2 id="1">Syntax</h2><pre class="language-matlab">Y = adc2mv(X, voltageRange, maxValue)
-</pre><h2 id="2">Description</h2><p>adc2mv(X, voltageRange, maxValue) returns millivolt values corresponding to the Analogue to Digital Converter Count and the voltage range set.</p><h2 id="3">Example</h2><pre class="codeinput">X = [-32512 -16256 0 16256 32512];
-voltageRange = 2000; <span class="comment">% +/-2V range</span>
+  </style></head><body><div class="content"><h1>adc2mv</h1><!--introduction--><p>Converts raw Analog to Digital Converter count values to millivolts.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">Example</a></li><li><a href="#4">Input Arguments</a></li><li><a href="#6">Output Arguments</a></li><li><a href="#8">See Also</a></li></ul></div><h2 id="1">Syntax</h2><pre class="language-matlab">Y = adc2mv(X, voltageRange, maxValue)
+</pre><h2 id="2">Description</h2><p>adc2mv(X, voltageRange, maxValue) returns millivolt values corresponding to the Analog to Digital Converter Count and the voltage range set.</p><h2 id="3">Example</h2><pre class="codeinput">X = [-32512 -16256 0 16256 32512];
+voltageRange = 2000; <span class="comment">% &plusmn;2 V range</span>
 maxValue = 32512;
 
 Y = adc2mv(X, voltageRange, maxValue)
@@ -77,10 +77,10 @@ Y =
 
        -2000       -1000           0        1000        2000
 
-</pre><h2 id="4">Input Arguments</h2><div><ul><li>X - the raw ADC value(s), (scalar, vector or matrix)</li><li>voltageRange - the voltage range used for the channel (positive, non-zero integer scalar value, in millivolts)</li><li>maxValue - the maximum ADC value corresponding to the resolution for the device (positive, non-zero integer scalar value)</li></ul></div><p>The units for voltageRange can be changed e.g. volts.</p><h2 id="6">Output Arguments</h2><div><ul><li>Y - the converted values (scalar, vector or matrix; in millivolts).</li></ul></div><p><b>Note:</b> If a different unit is used for the input X, then Y will have the corresponding units.</p><h2 id="8">See Also</h2><p><a href="mv2adc_help.html"><tt>mv2adc</tt></a></p><p><b>Copyright:</b> &copy; 2015 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
+</pre><h2 id="4">Input Arguments</h2><div><ul><li>X - the raw ADC value(s), (scalar, vector or matrix)</li><li>voltageRange - the voltage range used for the channel (positive, non-zero integer scalar value, in millivolts)</li><li>maxValue - the maximum ADC value corresponding to the resolution for the device (positive, non-zero integer scalar value)</li></ul></div><p>The units for voltageRange can be changed e.g. volts.</p><h2 id="6">Output Arguments</h2><div><ul><li>Y - the converted values (scalar, vector or matrix; in millivolts).</li></ul></div><p><b>Note:</b> If a different unit is used for the input X, then Y will have the corresponding units.</p><h2 id="8">See Also</h2><p><a href="mv2adc_help.html"><tt>mv2adc</tt></a></p><p><b>Copyright:</b> &copy; 2015-2019 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% adc2mv
-% Converts raw Analogue to Digital Converter count values to millivolts.
+% Converts raw Analog to Digital Converter count values to millivolts.
 
 %% Syntax
 %
@@ -90,13 +90,13 @@ Y =
 %% Description
 %
 % adc2mv(X, voltageRange, maxValue) returns millivolt values
-% corresponding to the Analogue to Digital Converter Count and the
+% corresponding to the Analog to Digital Converter Count and the
 % voltage range set.
 
 %% Example
 
 X = [-32512 -16256 0 16256 32512];
-voltageRange = 2000; % +/-2V range
+voltageRange = 2000; % ±2 V range
 maxValue = 32512;
 
 Y = adc2mv(X, voltageRange, maxValue)
@@ -122,7 +122,7 @@ Y = adc2mv(X, voltageRange, maxValue)
 
 %%
 %
-% *Copyright:* © 2015 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2015-2019 Pico Technology Ltd. All rights reserved.
 
 ##### SOURCE END #####
 --></body></html>
